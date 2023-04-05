@@ -1,6 +1,7 @@
 /* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
 
+/* reset and common styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,6 @@
 body {
   font-family: "Work Sans", sans-serif;
 }
-
 p {
   color: #727272;
   font-size: 16px;
@@ -18,14 +18,12 @@ p {
   margin-top: 24px;
   margin-bottom: 32px;
 }
-
 h2 {
   font-weight: 700;
   font-size: 45px;
   line-height: 53px;
   color: #131313;
 }
-
 h5 {
   font-weight: 600;
   font-size: 20px;
@@ -46,15 +44,19 @@ h5 {
   padding: 20px 25px;
   text-align: center;
 }
-
+.btn-primary:hover {
+  background-color: #fff4e7;
+  color: #ff900e;
+  border: 1px solid #ff900e;
+}
 header,
 main,
 footer {
   padding-left: 240px;
   padding-right: 240px;
 }
-/* Header section style */
 
+/* Header section style */
 header {
   /* padding: 50px 240px 45px 240px; */
   padding-top: 50px;
@@ -67,22 +69,22 @@ nav {
   justify-content: space-between;
   margin-bottom: 102px;
 }
-
 nav ul {
   display: flex;
   gap: 30px;
 }
-
 nav ul > li {
   list-style: none;
 }
-
 nav ul > li > a {
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
   color: #424242;
+}
+nav ul > li > a:hover {
+  color: #ff900e;
 }
 
 .banner {
@@ -120,20 +122,17 @@ nav ul > li > a {
   padding-left: 60px;
   padding-right: 60px;
 }
-
 .feature-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
-
 .feature-images img {
   width: 100%;
 }
 .feature-details {
   width: 537px;
 }
-
 .gray-text {
   color: #727272;
   font-weight: 500;
@@ -148,11 +147,9 @@ nav ul > li > a {
   justify-content: space-between;
   gap: 146px;
 }
-
 .feature-list-area {
   padding-top: 39px;
 }
-
 .feature-list-details h2 {
   padding-left: 21px;
   border-left: 5px solid #ff900e;
@@ -185,7 +182,9 @@ nav ul > li > a {
   left: -92px;
   bottom: 0;
 }
-
+.btn-special:hover {
+  background-color: #424242;
+}
 .btn-special h2 {
   color: #ffffff;
   font-size: 65px;
@@ -200,6 +199,7 @@ nav ul > li > a {
   line-height: 40px;
   margin: 0;
 }
+
 /* fact section styles */
 .fact-section {
   margin-top: 130px;
@@ -218,6 +218,11 @@ nav ul > li > a {
   padding: 46px 36px 36px 36px;
   border: 1px solid #ff900e;
   border-radius: 8px;
+  transition: all 1s ease;
+}
+.fact-item:hover {
+  transform: scale(1.2);
+  background-color: #fff4e7;
 }
 .fact-item h2 {
   color: #424242;
@@ -232,7 +237,6 @@ nav ul > li > a {
 .sponsor-section {
   margin-bottom: 130px;
 }
-
 .sponsor-details {
   align-items: center;
   display: flex;
@@ -242,11 +246,9 @@ nav ul > li > a {
 .sponsor-details p {
   width: 44%;
 }
-
 .sponsor-images {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   margin-top: 26px;
 }
 
@@ -259,7 +261,6 @@ nav ul > li > a {
   margin-bottom: 130px;
   padding: 40px;
 }
-
 .form-container {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -270,12 +271,10 @@ nav ul > li > a {
 .form-container:hover {
   border: 2px solid #ff900e;
 }
-
 .contact-form {
   display: flex;
   flex-direction: column;
 }
-
 .form-row {
   display: flex;
   margin: 32px 0;
@@ -286,11 +285,9 @@ form .form-row .input-data {
   margin: 0 20px;
   position: relative;
 }
-
 form .form-row .text-area {
   height: 70px;
 }
-
 .input-data input,
 .text-area textarea {
   display: block;
@@ -300,32 +297,28 @@ form .form-row .text-area {
   font-size: 17px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
-
 .text-area textarea {
   resize: none;
   padding-top: 10px;
 }
-
 .input-data label {
   position: absolute;
   bottom: 40px;
   font-size: 16px;
   pointer-events: none;
 }
-
 .text-area label {
   width: 100%;
   bottom: 40px;
   background-color: #ffffff;
 }
+
 /* footer styles */
 footer {
   background-color: #fff4e7;
   border-radius: 8px;
-  /* margin-bottom: 216px; */
   padding: 40px;
 }
-
 footer p {
   color: #424242;
   font-weight: 400;
@@ -333,4 +326,93 @@ footer p {
   line-height: 23px;
   text-align: center;
   margin: 0;
+}
+
+/* Responsive Css */
+@media screen and (max-width: 575.99px) {
+  header,
+  main,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  h1.banner-title,
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  /* header responsive styles */
+  nav {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  nav ul {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  /* feature responsive */
+  .feature-section {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .feature-images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .feature-details {
+    width: 100%;
+  }
+  /* feature lists responsive */
+  .feature-lists {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .feature-list-details h2 {
+    width: 100%;
+  }
+  .feature-list-image-area {
+    display: flex;
+    flex-direction: column;
+    position: static;
+  }
+  .btn-special {
+    position: static;
+    width: 100%;
+    margin-top: 40px;
+  }
+  /* fact section responsive */
+  .fact-section {
+    margin-top: 130px;
+    margin-bottom: 180px;
+    padding: 40px;
+  }
+  .fact-section .facts-text {
+    width: 100%;
+  }
+  .facts {
+    flex-direction: column;
+    gap: 40px;
+  }
+  /* sponsor section responsive */
+  .sponsor-details p {
+    width: 100%;
+  }
+  .sponsor-images {
+    flex-direction: column;
+  }
+  .sponsor-images img {
+    padding: 40px;
+  }
+  /* contact us section styles */
+  .form-container {
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 45px;
+  }
+  form .form-row .input-data {
+    margin: 0;
+  }
 }
